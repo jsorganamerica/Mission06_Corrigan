@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - Mission06_Corrigan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light border-bottom mb-3">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                Joel Hilton Film Collection
+            </a>
+
+            <div class="navbar-nav">
+
+                <a class="nav-link" asp-controller="Home" asp-action="Index">
+                    Home
+                </a>
+
+                <a class="nav-link" asp-controller="Home" asp-action="GetToKnowJoel">
+                    Get to Know Joel
+                </a>
+
+                <a class="nav-link" asp-controller="Home" asp-action="AddMovie">
+                    Add Movie
+                </a>
+
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="container">
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+</div>
+
+<footer class="border-top footer text-muted mt-4">
+    <div class="container">
+        &copy; 2026 - Mission06_Corrigan
+    </div>
+</footer>
+
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+@RenderSection("Scripts", required: false)
+
+</body>
+</html>

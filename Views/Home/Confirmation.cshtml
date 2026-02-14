@@ -1,0 +1,11 @@
+@model Mission06_Corrigan.Models.Movie
+
+@{
+    ViewData["Title"] = "Confirmation";
+}
+
+<h2>Movie Added!</h2>
+
+<p><strong>@Model.Title</strong> has been added to the database.</p>
+
+<a asp-controller="Home" asp-action="AddMovie">Add another movie</a>
