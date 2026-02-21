@@ -1,0 +1,19 @@
+@model Mission06_Corrigan.Models.Movie
+
+@{
+    ViewData["Title"] = "Delete Movie";
+}
+
+<h1 class="mb-3 text-danger">Delete Movie</h1>
+
+<div class="alert alert-warning">
+    Are you sure you want to delete:
+    <strong>@Model.Title (@Model.Year)</strong>?
+</div>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="MovieId" />
+
+    <button type="submit" class="btn btn-danger">Yes, Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
